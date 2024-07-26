@@ -6,6 +6,7 @@
 :root {
   --index: calc(1vw + 1vh);
   --text: #e7e7e0;
+  --trainsition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
 @font-face {
@@ -64,6 +65,7 @@ body {
   background-position: center;
   will-change: transform;
   z-index: 2;
+  transition: var(--trainsition);
 }
 .layers__base {
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
@@ -84,6 +86,7 @@ body {
   font-weight: 900;
   color: var(--text);
   text-shadow: 0 0 15px #9e7d35;
+  transition: var(--trainsition);
 }
 .layers__title {
   font-size: calc(var(--index) * 2.5);
@@ -114,6 +117,7 @@ body {
   letter-spacing: calc(var(--index) / 7.5);
   transform: var(--main-article-transform);
   will-change: transform;
+  transition: var(--trainsition);
 }
 .main-article__paragraph {
   max-width: calc(var(--index) * 30);
@@ -121,6 +125,7 @@ body {
   margin-top: calc(var(--index) / 1.25);
   transform: var(--main-article-transform);
   will-change: transform;
+  transition: var(--trainsition);
 }
 .copy {
   position: absolute;
@@ -128,4 +133,7 @@ body {
   opacity: 0.45;
   font-size: calc(var(--index) * 0.75);
   letter-spacing: calc(var(--index) / 37.5);
+}
+.content {
+  will-change: transform;
 }
